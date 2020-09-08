@@ -5,6 +5,13 @@ import Animated, { Easing } from 'react-native-reanimated';
 import { bInterpolate, bin, useTransition } from 'react-native-redash';
 import Chevron from './Chevron';
 import Item, { LIST_ITEM_HEIGHT, ListItem } from './ListItem';
+import axios from 'Axios';
+
+const retrieveFavoriteTrucks = () => {
+  axios
+    .get(`${process.env.EXPO_LocalLan}/user/favoriteTrucks/${userId}`)
+    .then((data) => alert(JSON.stringify(data))
+};
 
 const { not, interpolate } = Animated;
 const styles = StyleSheet.create({

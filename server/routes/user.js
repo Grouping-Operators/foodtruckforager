@@ -39,9 +39,7 @@ userRouter.get('/review/:userId', (req, res) => {
 
 // create a new user
 userRouter.post('/new', (req, res) => {
-  const {
-    fullName, googleId, badge, profilePhotoUrl,
-  } = req.body;
+  const { fullName, googleId, badge, profilePhotoUrl } = req.body;
 
   User.findOrCreate({
     where: {
@@ -96,6 +94,20 @@ userRouter.post('/review/new/:truckId/:userId', (req, res) => {
     });
 });
 
+// retrieval of favorite trucks from certain user
+userRouter.get('/favoriteTrucks/:userId', (req, res) => {
+  const { userId } = req.params;
+
+  Review.findAll({
+    where: {
+      id_user: userId,
+      favorite: true,
+    },
+  }).then((reviews) => {
+    res.send(reviews);
+  });
+});
+
 // route to update user
 userRouter.put('/update/:userId', (req, res) => {
   const { userId } = req.params;
@@ -112,7 +124,7 @@ userRouter.put('/update/:userId', (req, res) => {
       where: {
         id: userId,
       },
-    },
+    }
   )
     .then(() => {
       res.status(201).send('successfully updated user');
@@ -136,7 +148,7 @@ userRouter.put('/update/badge/:userId', (req, res) => {
       where: {
         id: userId,
       },
-    },
+    }
   )
     .then(() => {
       res.status(201).send('successfully updated user badge');
@@ -174,7 +186,7 @@ userRouter.put('/update/upvote/:userId/:reviewId', (req, res) => {
                 },
                 {
                   where: { id_user: userId },
-                },
+                }
               )
                 .then(() => {
                   res.status(201).send('upvote has been received');
