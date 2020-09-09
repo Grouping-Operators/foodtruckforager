@@ -123,7 +123,7 @@ userRouter.put('/update/:userId', (req, res) => {
       where: {
         id: userId,
       },
-    }
+    },
   )
     .then(() => {
       res.status(201).send('successfully updated user');
@@ -184,7 +184,7 @@ userRouter.put('/update/badge/:userId', (req, res) => {
       where: {
         id: userId,
       },
-    }
+    },
   )
     .then(() => {
       res.status(201).send('successfully updated user badge');
@@ -222,7 +222,7 @@ userRouter.put('/update/upvote/:userId/:reviewId', (req, res) => {
                 },
                 {
                   where: { id_user: userId },
-                }
+                },
               )
                 .then(() => {
                   res.status(201).send('upvote has been received');
