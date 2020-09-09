@@ -10,7 +10,10 @@ import UserPosts, { UserPosts as ListModelUserPosts } from './UserPosts';
 
 const favoriteTrucks: ListModelFavoriteTruck = {
   name: 'User Profile Demo',
-  items: [{ name: 'Food Truck Demo 1', points: 'Favorites To Go Here' }],
+  items: [
+    { name: 'Food Truck Demo 1', points: 'Favorites To Go Here' },
+    { name: 'Food Truck Demo 2', points: 'Delete' },
+  ],
 };
 
 const badges: ListModelBadges = {

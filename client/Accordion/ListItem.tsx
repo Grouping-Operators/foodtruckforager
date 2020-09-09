@@ -57,3 +57,8 @@ export default ({ item, isLast }: ListItemProps) => {
     </View>
   );
 };
+// TO DO:
+// Add touchable opacity with onpress function
+// when pressed removes that specified view (hides it)
+// and async calls to the data base to remove that favorite
+// truck from the profiles list / db, whatever you wanna call it
