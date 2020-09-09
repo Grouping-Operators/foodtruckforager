@@ -561,4 +561,45 @@ function doStuffWithUserModel() {
     .catch((err) => console.error(`❌${err}`));
 }
 
+// Favorite.create({
+//   where: {
+//     id_user: 1,
+//     id_truck: 1,
+//   },
+//   favorite: true,
+// })
+//   .then((favorites) => console.log(`✅ ${favorites.length} Favorite found`))
+//   .catch((err) => console.error(`❌${err}`));
+
+// Favorite.create({
+//   where: {
+//     id_user: 1,
+//     id_truck: 2,
+//   },
+//   favorite: true,
+// })
+//   .then((favorites) => console.log(`✅ ${favorites.length} Favorite found`))
+//   .catch((err) => console.error(`❌${err}`));
+
+// Truck.findAll({
+//   // include: {
+//   //   model: Favorite,
+//   //   where: {
+//   //     id_user: 1,
+//   //     required: false,
+//   //   },
+//   // },
+//   include: [
+//     {
+//       model: Favorite,
+//       required: false,
+//       where: {
+//         id_user: 1,
+//       },
+//     },
+//   ],
+// })
+// .then((data) => console.log(`✅ ${data.length} ${data} Favorite Truck found`))
+// .catch((err) => console.error(`❌${err}`));
+
 doStuffWithUserModel();

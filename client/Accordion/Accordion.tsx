@@ -21,11 +21,6 @@ const badges: ListModelBadges = {
   items: [{ name: 'Badges', points: 'Badges to go here' }],
 };
 
-const settings: ListModelSettings = {
-  name: 'Settings',
-  items: [{ name: 'Profile', points: 'Settings to go here' }],
-};
-
 const userPosts: ListModelUserPosts = {
   name: 'User Posts',
   items: [{ name: 'User Posts', points: 'User Posts Go Here' }],
@@ -49,7 +44,6 @@ export default () => {
       <Text style={styles.title}>User Profile</Text>
       <FavoriteTruck {...{ favoriteTrucks }} />
       <Badges {...{ badges }} />
-      <Settings {...{ settings }} />
       <UserPosts {...{ userPosts }} />
     </ScrollView>
   );
