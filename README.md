@@ -145,3 +145,4 @@ env_variables:
 # Contact
 
 - Sebastianhove@gmail.com
+- toph.stumpe@gmail.com
