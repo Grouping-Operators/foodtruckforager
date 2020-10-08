@@ -144,5 +144,4 @@ env_variables:
 
 # Contact
 
-- ioctosteigner@gmail.com
-- peterklingelhofer@gmail.com
+- Sebastianhove@gmail.com
